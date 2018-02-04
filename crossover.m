@@ -2,7 +2,7 @@ function Offsprings = crossover(popsize,Crowdness,parents,crossover_rate,Populat
 k=1;
 for i=1:(popsize/2)
     a=randi(Crowdness);
-    crossover_fraction=((Crowdness-a)/Crowdness);  % fraction is randomed here
+    crossover_fraction=((Crowdness-a)/Crowdness);  % fraction is random
     x=rand;
     couple=[parents(2*i-1) parents(2*i)];
     if x<crossover_rate
