@@ -54,6 +54,7 @@ information on preference for the course assigned
 Example fpr input:
 Crowdness=Low,
 Popularity=Unbalanced
+
 PREFERENCE
 C1 C2 C3 C4
 S1 1 2 3 4
@@ -79,3 +80,4 @@ S20 1 2 3 4
 Population size: ...
 Cross over rate: ...
 Mutation rate:...
+
