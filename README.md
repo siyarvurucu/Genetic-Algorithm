@@ -55,29 +55,29 @@ Example fpr input:
 Crowdness=Low,
 Popularity=Unbalanced
 
-PREFERENCE
-C1 C2 C3 C4
-S1 1 2 3 4
-S2 2 1 3 4
-S3 1 3 4 2
-S4 3 1 2 4
-S5 1 2 4 3
-S6 2 3 1 4
-S7 1 3 2 4
-S8 3 1 4 2
-S9 4 1 2 3
-S10 3 1 2 4
-S11 1 2 3 4
-S12 2 1 3 4
-S13 1 3 2 4
-S14 4 3 1 2
-S15 3 2 1 4
-S16 2 4 1 3
-S17 1 2 4 3
-S18 3 4 2 1
-S19 1 3 2 4
-S20 1 2 3 4
-Population size: ...
-Cross over rate: ...
-Mutation rate:...
+PREFERENCE  
+C1 C2 C3 C4  
+S1 1 2 3 4  
+S2 2 1 3 4    
+S3 1 3 4 2  
+S4 3 1 2 4  
+S5 1 2 4 3  
+S6 2 3 1 4  
+S7 1 3 2 4  
+S8 3 1 4 2  
+S9 4 1 2 3  
+S10 3 1 2 4  
+S11 1 2 3 4  
+S12 2 1 3 4  
+S13 1 3 2 4  
+S14 4 3 1 2  
+S15 3 2 1 4  
+S16 2 4 1 3  
+S17 1 2 4 3  
+S18 3 4 2 1  
+S19 1 3 2 4  
+S20 1 2 3 4  
+Population size: ...  
+Cross over rate: ...  
+Mutation rate:...  
 
