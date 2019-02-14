@@ -1,4 +1,4 @@
-function [FitnessMatrix,popsizenow] = siyar(Crowdness,preferenceMatrix,Population)
+function [FitnessMatrix,popsizenow] = fitness(Crowdness,preferenceMatrix,Population)
 popsizenow=length(Population)/Crowdness;
 for j=1:popsizenow
     individual=Population(((j-1)*Crowdness+1):(j*Crowdness));
