@@ -13,16 +13,16 @@ load('preferenceMatrices.mat');
 for k=1:10
 preferenceMatrix=preferenceMatrices(((k-1)*Crowdedness+1):(k*Crowdedness),:);
 Population = god(preferenceMatrix,Crowdedness,popsize); % creation of initial population
-FitnessMatrix = siyar(Crowdedness,preferenceMatrix,Population); %To observe fitnesses of individual population
+FitnessMatrix = fitness(Crowdedness,preferenceMatrix,Population); %To observe fitnesses of individual population
 for j=1:maxgen
 parents = tournamentselection(Population,tmsize,popsize,FitnessMatrix);
 Offsprings=crossover(popsize,Crowdedness,parents,crossover_rate,Population,crossover_fraction);
 Offsprings=mutation(Crowdedness,mutation_rate,Offsprings);
 Population =[Population Offsprings];
-[FitnessMatrix, popsizenow] = siyar(Crowdedness,preferenceMatrix,Population);  %popsizenow can be used to observe how population is changing. When c_rate=1, popsizenow=2*popsize
+[FitnessMatrix, popsizenow] = fitness(Crowdedness,preferenceMatrix,Population);  %popsizenow can be used to observe how population is changing. When c_rate=1, popsizenow=2*popsize
 %popsizenow
 Population=roulettewheel(Population,FitnessMatrix,Crowdedness,popsize);
-FitnessMatrix = siyar(Crowdedness,preferenceMatrix,Population);
+FitnessMatrix = fitness(Crowdedness,preferenceMatrix,Population);
 % Info of the generation ; %
 %disp('generation number, max fitness, cost');
 j;
@@ -38,7 +38,7 @@ for i=1:Crowdedness
     bestIndividualfenotip(i,bestIndividual(i))=1;
 end
 sprintf('Results for preference matrix %d',k)
-FitnessMatrix= siyar(Crowdedness,preferenceMatrix,Population);
+FitnessMatrix= fitness(Crowdedness,preferenceMatrix,Population);
 preferenceMatrix
 bestIndividualfenotip
 courseregistered =[sum(bestIndividual==1) sum(bestIndividual==2) sum(bestIndividual==3) sum(bestIndividual==4)]
