@@ -50,7 +50,8 @@ GA Algorithm Output:
 Class lists for each course, which is the solution represented by the best chromosome, together with
 information on preference for the course assigned
 - Ask how many generations to continue (0 means stop)  
-- If 0 entered then plot fitness vs generation number and then stop    
+- If 0 entered then plot fitness vs generation number and then stop  
+  
 Example for input:
 
 Crowdedness=Low  
