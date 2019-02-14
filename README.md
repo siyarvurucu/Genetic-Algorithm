@@ -9,7 +9,7 @@ far as the following constraints permits:
 Description of input meta parameters:
 - Number of offered courses: K=4
 - Maximum capacity of courses: 8 students
-- Crowdness depends on number of total students (N)
+- Crowdedness depends on number of total students (N)
   a) Low: N=20
   b) High: N=30
 - Popularity of courses (vector): 
@@ -36,24 +36,25 @@ Selection of parents for crossover: Tournament selection
 Selection for next generation: Roulette wheel
 
 **GA Algorithm Input:**
-- Crowdness, Popularity
+- Crowdedness, Popularity
 - A randomly created Preference matrix
 - Meta parameters (suggested values)
 - How many generations to continue (0 means stop)
 
 GA Algorithm Output:
-- For each generation repeatedly show:
-  - Generation number
-  - Calculated Cost for the best chromosome
-  - Fitness of the best chromosome
-- If number of generations completed, show the solution:
+- For each generation repeatedly show:  
+  - Generation number  
+  - Calculated Cost for the best chromosome  
+  - Fitness of the best chromosome  
+- If number of generations completed, show the solution:  
 Class lists for each course, which is the solution represented by the best chromosome, together with
 information on preference for the course assigned
-- Ask how many generations to continue (0 means stop)
-- If 0 entered then plot fitness vs generation number and then stop
-Example fpr input:
-Crowdness=Low,
-Popularity=Unbalanced
+- Ask how many generations to continue (0 means stop)  
+- If 0 entered then plot fitness vs generation number and then stop    
+Example for input:
+
+Crowdedness=Low  
+Popularity=Unbalanced  
 
 PREFERENCE  
 C1 C2 C3 C4  
