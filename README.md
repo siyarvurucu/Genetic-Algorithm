@@ -6,35 +6,35 @@ far as the following constraints permits:
 - Each student should be assigned to exactly one course
 - Course capacities should not be exceeded
 
-Description of input meta parameters:
-- Number of offered courses: K=4
-- Maximum capacity of courses: 8 students
-- Crowdedness depends on number of total students (N)
-  a) Low: N=20
-  b) High: N=30
-- Popularity of courses (vector): 
-  Popularity[4]
-  - Balanced: Popularity=[5, 5, 5, 5]
-  - Unbalanced: Popularity=[10, 5, 5, 2]
+Description of input meta parameters:  
+- Number of offered courses: K=4  
+- Maximum capacity of courses: 8 students  
+- Crowdedness depends on number of total students (N)  
+  a) Low: N=20  
+  b) High: N=30  
+- Popularity of courses (vector):  
+  Popularity[4]  
+  - Balanced: Popularity=[5, 5, 5, 5]  
+  - Unbalanced: Popularity=[10, 5, 5, 2]  
   
-Elective course preference simulation:
+Elective course preference simulation:  
+  
+Preference[N, 4] is the matrix indicating course preferences of the students. P[k, -] is the row vector  
+showing the preference of student k, each component having preference value.  
 
-Preference[N, 4] is the matrix indicating course preferences of the students. P[k, -] is the row vector
-showing the preference of student k, each component having preference value.
-
-For example; P[k, -]=[2, 1 , 4, 3]
-Selection of 1st preference: One of the courses i=1…4 is selected randomly according to distribution
-Pi=Popularity[i] / (sum(Popularity[k], k=1…4))
+For example; P[k, -]=[2, 1 , 4, 3]  
+Selection of 1st preference: One of the courses i=1…4 is selected randomly according to distribution  
+Pi=Popularity[i] / (sum(Popularity[k], k=1…4))  
 
 Selection of the other preferences: Remove the selected course from the course set, and repeat the
 selection considering popularity of the remaining courses.
 
-EA metaparameters (Population size, Crossover rate, Mutation rate, tournament size etc.) are to be
-determined by experimentation.
+EA metaparameters (Population size, Crossover rate, Mutation rate, tournament size etc.) are to be  
+determined by experimentation.  
 
-Selection of parents for crossover: Tournament selection
-Selection for next generation: Roulette wheel
-
+Selection of parents for crossover: Tournament selection  
+Selection for next generation: Roulette wheel  
+  
 **GA Algorithm Input:**
 - Crowdedness, Popularity
 - A randomly created Preference matrix
