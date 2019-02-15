@@ -2,7 +2,7 @@ function [FitnessMatrix,popsizenow] = fitness(Crowdness,preferenceMatrix,Populat
 popsizenow=length(Population)/Crowdness;
 for j=1:popsizenow
     individual=Population(((j-1)*Crowdness+1):(j*Crowdness));
-    p=zeros(Crowdness,4); % p is physical appearance of the individual
+    p=zeros(Crowdness,4);                       % p is physical appearance of the individual
     for i=1:Crowdness
         p(i,individual(i))=1;
     end
@@ -14,7 +14,7 @@ for j=1:popsizenow
         c=allidx(b~=0);
         cost= cost + c -1;
     end
-    kost(j)=cost;
+    CostMatrix(j)=cost;
     if Crowdness==30
         Fitness(j)= (2/3)*(Crowdness*3)-cost;   %(2/3) term comes when crowdness=30 to fix max fitness to 60 and punish cost more.
     else
@@ -25,5 +25,4 @@ for j=1:popsizenow
     end 
     end
     FitnessMatrix = Fitness;
-    CostMatrix=kost;
 end
