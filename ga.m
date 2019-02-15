@@ -1,5 +1,5 @@
 tic
-Crowdedness=30;                                                               % Crowdedness*
+Crowdedness=30;                                                              
 crossover_rate=1;
 crossover_fraction=(22/Crowdedness); % Choose where to crossover genes. numerator should be integer and less than crowdedness.
 mutation_rate=1;
